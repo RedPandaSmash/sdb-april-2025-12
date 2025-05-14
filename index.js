@@ -69,3 +69,22 @@ fetchUserData()
     .finally(() => {
         console.log("Fetch user data operation completed.");
     })
+
+function delay(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
+
+async function ourExample() {
+    console.log("Starting ourExample async function");
+    await delay(2000); // Wait for 2 seconds
+    console.log("2 seconds have passed");
+    await delay(4000); // Wait for another 4 seconds
+    console.log("4 more seconds have passed");
+    console.log("Ending ourExample async function");
+}
+
+console.log("Start the async await exampple")
+ourExample()
+console.log("End the async await example")
