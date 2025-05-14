@@ -6,3 +6,16 @@ process.stdin.once("data", (data) => {
     console.log("You said: " + data.toString().trim());
     process.exit(0);
 })
+
+let myName = "Jimmy";
+
+function greetUser(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function welcomeToUprightEducation() {
+    console.log("Welcome to Upright Education!");
+}
+
+greetUser(myName, welcomeToUprightEducation);
