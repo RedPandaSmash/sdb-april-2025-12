@@ -61,7 +61,7 @@ function fetchUserData() {
 // use the promise
 fetchUserData()
     .then((data) => {
-        console.log("User data:", data);
+        console.log("User data from promise:", data);
     })
     .catch((error) => {
         console.error("Error:", error);
@@ -88,3 +88,14 @@ async function ourExample() {
 console.log("Start the async await exampple")
 ourExample()
 console.log("End the async await example")
+
+async function getUser() {
+    try {
+        const user = await fetchUserData();
+        console.log("User data from async await function:", user)
+    } catch (error) {
+        console.error("Error fetching user data:", error);
+    }
+}
+
+getUser();
